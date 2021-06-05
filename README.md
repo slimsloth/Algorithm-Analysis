@@ -8,11 +8,11 @@
 #### 1. Mathematical Analysis
 - [ ] Complete Exercises 3-14 (a) and 3-14 (b) from Algorithm Design in Three Acts.
 #### 2. Implementation in C++
-- [ ] mean problem instance generation
-- [ ] square matrix construction problem instance generation
+- [x] mean problem instance generation
+- [x] square matrix construction problem instance generation
 ##### Algorithm Implementation
 - [x] mean problem implementation
 - [x] square matrix construction problem implementation
 #### 3. Empirical Analysis
-- [ ] Gather timing data for each algorithm by running your implementations for various values of n. 
+- [x] Gather timing data for each algorithm by running your implementations for various values of n.
 - [ ] Create a scatter plot showing your observations as elapsed time vs. instance size n, and plot a best-fit curve for each algorithm
