@@ -1,6 +1,8 @@
 #include <vector>
 #include <iostream>
 #include <ctime>
+#include <chrono>
+#include <fstream>
 
 /******************************************
  * mean problem

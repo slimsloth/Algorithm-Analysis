@@ -4,30 +4,33 @@
 #include "instance_generation.cpp"
 
 int main()  {
-    // Print mean function for testing purposes
-    std::cout << mean({1,2,3,4,5}) << '\n';
-
-    // Print the n x n vector for testing purposes
-    std::vector<std::vector<int>> vect = construct_square_matrix(7, 69);
-    for (int i = 0; i < vect.size(); i++)
-    {
-        for (int j = 0; j < vect[i].size(); j++)
-        {
-            std::cout << vect[i][j] << " ";
-        }
-        std::cout << '\n';
+    // Gather mean problem execution times
+    std::ofstream meanFile;
+    meanFile.open("mean.csv");
+    meanFile << "n,time elapsed (ms)\n";
+    for(int n=1; n<=1000; n++) {
+        std::vector<int> meanVect = meanProblemInstanceGeneration(n);
+        auto start = std::chrono::steady_clock::now();
+        mean(meanVect);
+        auto end = std::chrono::steady_clock::now();
+        std::chrono::duration<double> elapsed_ms = (end-start)*1000;
+        std::cout << "n = " << n << " elapsed time: " << elapsed_ms.count() << "ms\n";
+        meanFile << n << "," << elapsed_ms.count() << "\n";
     }
 
-    // Test mean instance generation
-    std::vector<int> testVect = meanProblemInstanceGeneration(5);
-    for(int i=0; i<testVect.size(); i++) {
-        std::cout << testVect[i] << " ";
+    // Gather square matrix construction execution times
+    std::ofstream matrixFile;
+    matrixFile.open("matrix.csv");
+    meanFile << "n,time elapsed (ms)\n";
+    for(int n=1; n<=100; n++) {
+        int x = squareMatrixInstanceGeneration(n);
+        auto start = std::chrono::steady_clock::now();
+        std::vector<std::vector<int>> matrix = construct_square_matrix(n,x);
+        auto end = std::chrono::steady_clock::now();
+        std::chrono::duration<double> elapsed_ms = (end-start)*1000;
+        std::cout << "n = " << n << " elapsed time: " << elapsed_ms.count() << "ms\n";
+        matrixFile << n << "," << elapsed_ms.count() << "\n";
     }
-    std::cout << '\n';
-
-    // Test construct square matrix instance generation
-    int n = squareMatrixInstanceGeneration(3);
-    std::cout << n << '\n';
 
     return 0;
 }
