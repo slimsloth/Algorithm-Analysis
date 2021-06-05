@@ -10,7 +10,7 @@ int main()  {
     std::ofstream meanFile;
     meanFile.open("mean.csv");
     meanFile << "n,time elapsed (ms)\n";
-    for(int n=1; n<=1000; n++) {
+    for(int n=1; n<=5000; n++) {
         std::vector<int> meanVect = meanProblemInstanceGeneration(n);
         auto start = std::chrono::steady_clock::now();
         mean(meanVect);
@@ -23,8 +23,8 @@ int main()  {
     // Gather square matrix construction execution times
     std::ofstream matrixFile;
     matrixFile.open("matrix.csv");
-    meanFile << "n,time elapsed (ms)\n";
-    for(int n=1; n<=100; n++) {
+    matrixFile << "n,time elapsed (ms)\n";
+    for(int n=1; n<=5000; n++) {
         int x = squareMatrixInstanceGeneration(n);
         auto start = std::chrono::steady_clock::now();
         std::vector<std::vector<int>> matrix = construct_square_matrix(n,x);
