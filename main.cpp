@@ -3,6 +3,8 @@
 #include "construct_square_matrix.cpp"
 #include "instance_generation.cpp"
 
+// main driver code - collects time data for both mean() and construct_square_matrix().
+// creates a csv file for both function timings, with 1000 iterations/records per function.
 int main()  {
     // Gather mean problem execution times
     std::ofstream meanFile;
