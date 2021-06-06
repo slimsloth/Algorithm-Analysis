@@ -15,4 +15,4 @@
 - [x] square matrix construction problem implementation
 #### 3. Empirical Analysis
 - [x] Gather timing data for each algorithm by running your implementations for various values of n.
-- [ ] Create a scatter plot showing your observations as elapsed time vs. instance size n, and plot a best-fit curve for each algorithm
+- [x] Create a scatter plot showing your observations as elapsed time vs. instance size n, and plot a best-fit curve for each algorithm

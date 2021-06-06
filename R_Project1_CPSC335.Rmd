@@ -15,12 +15,18 @@ runtime: shiny
 ## Algorithm Implementation
 
 # 3. Empirical Analysis
+In this section, we will be empirically analyzing the performance of both the
+mean problem and the construct matrix problem.
 ```{r libraries, include=FALSE}
 library(ggplot2)
 library(tidyverse)
 library(RColorBrewer)
 ```
 ## Mean Problem Scatterplot
+What is the efficiency class of the `mean` algorithm? mean runs in O(n) time.
+We predict that if we implement the `mean` algorithm in C++ then measure its performance on 
+a large amount of inputs n, the points will fit a straight line T(N) = c*n for some constant slope c.
+
 ```{r mean_problem_scatterplot}
 meanExecutionTimes <- read_csv("mean.csv")
 ggplot(meanExecutionTimes, aes(x = n, y = `time elapsed (ms)`, color=`time elapsed (ms)`)) + geom_point() + geom_smooth(color="red") + ggtitle("Mean Problem Growth")
