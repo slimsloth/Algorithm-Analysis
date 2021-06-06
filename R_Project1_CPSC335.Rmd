@@ -1,0 +1,33 @@
+---
+title: "CPSC 335 Algorithm Engineering"
+output: html_document
+runtime: shiny
+---
+
+# Project 1
+## Group Members: Sean Mitchell, Jason Mora-Mendoza
+
+# 1. Mathematical Analysis
+
+# 2. Implementation in C++
+
+## Random Problem Generation
+## Algorithm Implementation
+
+# 3. Empirical Analysis
+```{r libraries, include=FALSE}
+library(ggplot2)
+library(tidyverse)
+library(RColorBrewer)
+```
+## Mean Problem Scatterplot
+```{r mean_problem_scatterplot}
+meanExecutionTimes <- read_csv("mean.csv")
+ggplot(meanExecutionTimes, aes(x = n, y = `time elapsed (ms)`, color=`time elapsed (ms)`)) + geom_point() + geom_smooth(color="red") + ggtitle("Mean Problem Growth")
+```
+
+## Matrix Problem Scatterplot
+```{r matrix_problem_scatterplot}
+matrixExecutionTimes <- read_csv("matrix.csv")
+ggplot(matrixExecutionTimes, aes(x = n, y = `time elapsed (ms)`, color=`time elapsed (ms)`)) + geom_point() + geom_smooth(color="red") + ggtitle("Matrix Problem Growth")
+```
