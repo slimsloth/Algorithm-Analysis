@@ -6,7 +6,7 @@
 
 ### Requirements
 #### 1. Mathematical Analysis
-- [ ] Complete Exercises 3-14 (a) and 3-14 (b) from Algorithm Design in Three Acts.
+- [x] Complete Exercises 3-14 (a) and 3-14 (b) from Algorithm Design in Three Acts.
 #### 2. Implementation in C++
 - [x] mean problem instance generation
 - [x] square matrix construction problem instance generation
