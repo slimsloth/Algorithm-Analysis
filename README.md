@@ -22,12 +22,12 @@ Due to the nature of this program, it may take a long period (~20 minutes) to ru
 - [x] Create a scatter plot showing your observations as elapsed time vs. instance size n, and plot a best-fit curve for each algorithm
 
 ## Relevant Files:
-main.cpp - main test driver program
-mean.cpp - C++ implementation of mean pseudocode
-construct_square_matrix.cpp - implementation of square matrix pseudocode
-instance_generation.cpp - contains the 2 functions that generate a random problem instance
-header.h - main header file for program
-makefile - compiles and runs program
-output/mean.csv - data for mean execution times
-output/matrix.csv - data for matrix execution times
-CPSC 335 Project 1.pdf- main pdf report for project. Contains exercise answers and scatterplots
+main.cpp - main test driver program  
+mean.cpp - C++ implementation of mean pseudocode  
+construct_square_matrix.cpp - implementation of square matrix pseudocode  
+instance_generation.cpp - contains the 2 functions that generate a random problem instance  
+header.h - main header file for program  
+makefile - compiles and runs program  
+output/mean.csv - data for mean execution times  
+output/matrix.csv - data for matrix execution times  
+CPSC 335 Project 1.pdf- main pdf report for project. Contains exercise answers and scatterplots  
