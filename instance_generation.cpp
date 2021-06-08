@@ -11,7 +11,7 @@ std::vector<int> meanProblemInstanceGeneration(int n) {
     std::vector<int> L;
      std::srand(std::time(nullptr));
     for(int i=0; i<n; i++) {
-        L.push_back(std::rand());
+        L.push_back((std::rand()%1000)+1);
     }
     return L;
 }

@@ -3,7 +3,9 @@
 ### Group Members: Sean Mitchell, Jason Mora-Mendoza
 
 ### Summary
-
+This program implements two functions: mean() and construct_square_algorithm(). main.cpp tests and records the running time for each function, 15000 times each and ouputs the results to their respective .csv files.
+## WARNING
+Due to the nature of this program, it may take a long period (~20 minutes) to run and output all results. It is safe to kill the process early if you wish, but if you want to collect all the data you must wait for the program to terminate on its own.
 ### Requirements
 #### 1. Mathematical Analysis
 - [x] Complete Exercises 3-14 (a) and 3-14 (b) from Algorithm Design in Three Acts.

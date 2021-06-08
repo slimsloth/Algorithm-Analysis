@@ -8,7 +8,7 @@
 int main()  {
     // Gather mean problem execution times - 3 trials per n
     std::ofstream meanFile;
-    meanFile.open("mean.csv");
+    meanFile.open("./output/mean.csv");
     meanFile << "n,time elapsed (ms)\n";
     for(int n=1; n<=5000; n++) {
         std::vector<int> meanVect = meanProblemInstanceGeneration(n);
@@ -39,7 +39,7 @@ int main()  {
 
     // Gather square matrix construction execution times - 3 trials per n
     std::ofstream matrixFile;
-    matrixFile.open("matrix.csv");
+    matrixFile.open("./output/matrix.csv");
     matrixFile << "n,time elapsed (ms)\n";
     for(int n=1; n<=5000; n++) {
         int x = squareMatrixInstanceGeneration(n);
